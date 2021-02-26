@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'package:html/dom.dart';
 
 import 'package:vokabularium_scraper/src/page/page.dart';
 import 'package:vokabularium_scraper/src/parser/parser.dart';
