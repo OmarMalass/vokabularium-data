@@ -6,6 +6,8 @@ import 'package:vokabularium_scraper/src/scrap/linguee_scrap.dart';
 import 'package:vokabularium_scraper/src/utils/formatter.dart';
 
 class LingueeParser extends Parser<LingueePage> {
+  const LingueeParser();
+
   @override
   LingueeScrap parse(Document document) {
     var entries = extractEntries(document);
@@ -133,7 +135,6 @@ class LingueeParser extends Parser<LingueePage> {
         .querySelectorAll('div[class^=source_url]')
         .forEach((e) => e.remove());
 
-    
     return formatText(element.text);
   }
 }

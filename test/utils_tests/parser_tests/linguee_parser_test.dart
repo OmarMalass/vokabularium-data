@@ -75,8 +75,7 @@ void main() async {
           'The extension of the DART electrified rail network north and south of Dublin City to the outer suburbs was also assisted as there are more daily passengers on the suburban rail network in Dublin than on the rest of the network combined.',
           'Die Erweiterung des elektrifizierten DART-Schienennetzes nördlich und südlich von Dublin City zu den äußeren Vororten wurde ebenfalls unterstützt, da diese Verbindungen täglich von mehr Fahrgästen genutzt werden als alle Verbindungen des übrigen Bahnnetzes zusammen.');
 
-      expect(scrap.examples[0].source, testExample.source);
-      expect(scrap.examples[0].target, testExample.target);
+      expect(scrap.examples, contains(testExample));
     });
   });
 }

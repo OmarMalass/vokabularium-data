@@ -49,7 +49,9 @@ class Example {
   Example(this.source, this.target);
 
   @override
-  String toString() {
-    return '{source: $source, target: $target}';
-  }
+  String toString() => '{source: $source, target: $target}';
+
+  @override
+  bool operator ==(Object other) =>
+      other is Example && other.source == source && other.target == target;
 }
