@@ -1,17 +1,11 @@
 RegExp whiteSpacesPattern = RegExp(r'\s');
-
-String normalizeWhiteSpaces(String s) {
-  return s.replaceAll(whiteSpacesPattern, ' ');
-}
-
 RegExp extraSpacesPattern = RegExp(r'\s+');
 RegExp startTrailingSpaces = RegExp(r'(^\s)|(\s$)');
 
-String removeExtraWhitepsaces(String s) {
-  return s
-      .replaceAll(extraSpacesPattern, ' ')
-      .replaceAll(startTrailingSpaces, '');
-}
+String normalizeWhiteSpaces(String s) => s.replaceAll(whiteSpacesPattern, ' ');
+
+String removeExtraWhitepsaces(String s) =>
+    s.replaceAll(extraSpacesPattern, ' ').replaceAll(startTrailingSpaces, '');
 
 String formatText(String s, {bool extraWS = true, bool normWS = true}) {
   var formatted = s;
